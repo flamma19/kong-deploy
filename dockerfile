@@ -23,4 +23,4 @@ ENV KONG_DATABASE="off" \
 EXPOSE 8000 8443
 
 # Start Kong with the provided configuration
-ENTRYPOINT ["bash", "-c", "eval $(cat /app/kong.yml) > /home/kong/kong.yml && /docker-entrypoint.sh kong docker-start"]
+ENTRYPOINT ["bash", "-c", "echo \"$(cat /app/kong.yml)\" > /home/kong/kong.yml && /docker-entrypoint.sh kong docker-start"]
