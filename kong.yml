@@ -26,7 +26,7 @@ acls:
 ### Dashboard credentials
 ###
 basicauth_credentials:
-  - consumer: DASHBOARD
+  - consumer: service_role
     username: tank_admin
     password: tank_admin
 
