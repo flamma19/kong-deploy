@@ -134,7 +134,8 @@ services:
   ## Secure Realtime routes
   - name: realtime-v1-ws
     _comment: 'Realtime: /realtime/v1/* -> ws://realtime.tank.svc:4000/socket/*'
-    url: ws://realtime.tank.svc:4000/socket
+    url: http://realtime.tank.svc:4000/socket
+    protocol: ws
     routes:
       - name: realtime-v1-ws
         strip_path: true
@@ -227,7 +228,7 @@ services:
   ## Protected Dashboard - catch all remaining routes
   - name: dashboard
     _comment: 'Studio: /* -> http://studio.tank.svc:3000/*'
-    url: http://studio.tank.svc:3000/
+    url: http://647caf0c-ff74-4bc3-a5c9-155cc05dc3c3.hsvc.ir:31468/
     routes:
       - name: dashboard-all
         strip_path: true
