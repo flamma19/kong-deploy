@@ -135,7 +135,6 @@ services:
   - name: realtime-v1-ws
     _comment: 'Realtime: /realtime/v1/* -> ws://realtime.tank.svc:4000/socket/*'
     url: ws://realtime.tank.svc:4000/socket
-    protocol: ws
     routes:
       - name: realtime-v1-ws
         strip_path: true
